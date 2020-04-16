@@ -4,10 +4,6 @@ import org.junit.jupiter.api.Test;
 import eg.edu.alexu.csd.datastructure.queue.Classes.ArrQueue;
 class ArrayBasedTest {
 	@Test
-	void emptyConstructor() {
-		assertThrows(RuntimeException.class,() -> new ArrQueue() );
-	}
-	@Test
 	void arrayFullTest() {
 		ArrQueue test = new ArrQueue(2);
 		test.enqueue(1500);
@@ -35,22 +31,22 @@ class ArrayBasedTest {
 		test.enqueue(1);
 		test.enqueue(4);
 		test.enqueue(18);
-		assertEquals(test.dequeue(),1);
-		assertEquals(test.dequeue(),4);
+		assertEquals(1,test.dequeue());
+		assertEquals(4,test.dequeue());
 		test.enqueue(20);
 		test.enqueue(25);
 		test.enqueue(5);
-		assertEquals(test.dequeue(),18);
-		assertEquals(test.dequeue(),20);
-		assertEquals(test.dequeue(),25);
+		assertEquals(18,test.dequeue());
+		assertEquals(20,test.dequeue());
+		assertEquals(25,test.dequeue());
 		test.enqueue(4);
 		test.enqueue(8);
 		test.enqueue(15);
 		test.enqueue(12);
-		assertEquals(test.dequeue(),5);
-		assertEquals(test.dequeue(),4);
+		assertEquals(5,test.dequeue());
+		assertEquals(4,test.dequeue());
 		test.enqueue(1);
-		assertEquals(test.dequeue(),8);
-		assertEquals(test.size(),3);
+		assertEquals(8,test.dequeue());
+		assertEquals(3,test.size());
 	}
 }

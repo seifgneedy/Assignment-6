@@ -5,20 +5,20 @@ public class LinkedQueue implements IQueue,ILinkedBased {
 	private static class Node{
 		private Object element;
 		private Node next;
-		public Node(Object element,Node next) {
+		Node(Object element,Node next) {
 			this.setElement(element);
 			this.setNext(next);
 		}
-		public Object getElement() {
+		Object getElement() {
 			return element;
 		}
-		public void setElement(Object element) {
+		void setElement(Object element) {
 			this.element = element;
 		}
-		public Node getNext() {
+		Node getNext() {
 			return next;
 		}
-		public void setNext(Node next) {
+		void setNext(Node next) {
 			this.next = next;
 		}
 		
